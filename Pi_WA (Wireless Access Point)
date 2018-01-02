@@ -1,0 +1,5 @@
+#Set up your Raspberry Pi as an access point.
+
+There are a number of guides on how to do this out there, but many won't work as the way DCHP is handled in Raspbian has changed.
+My first few attempts to do this were only a partial success. One thing to be clear on is whether you want to set up an access point that lets you connect to your internet connection via the access point, or if you just want an access point to a standalone local net. Many of the guides are for the latter, being written with setting up a local IoT net for example.
+The guide I found that works is here: https://github.com/SurferTim/documentation/blob/master/configuration/wireless/access-point.md
