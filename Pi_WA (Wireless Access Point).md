@@ -15,7 +15,7 @@ I started from the position of having a working ethernet connection and a workin
 
 
 ## Get the software
-A 'bridge' needs to put in place between the wireless device and the Ethernet device on the access point Raspberry Pi. This bridge will pass all traffic between the two interfaces. Install the following packages to enable the access point setup and bridging. You are installing an accesspoint software called hostapd and a package of bridge software called bridge-utils, you will use brctl to set up the beidge. You can type 
+A 'bridge' needs to be put in place between the wireless device and the Ethernet device on the access point Raspberry Pi. This bridge will pass all traffic between the two interfaces. Install the following packages to enable the access point setup and bridging. You are installing an accesspoint software called hostapd and a package of bridge software called bridge-utils, you will use brctl to set up the beidge. You can type 
 ```man hostpd```
 or 
 ```man brctl```
