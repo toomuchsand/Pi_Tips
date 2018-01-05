@@ -5,7 +5,7 @@ As a result my first few attempts to do this were only a partial success. I coul
 
 One thing to be clear on is whether you want to set up an access point that lets you connect to your internet connection via the access point, or if you just want an access point to a standalone local net. Many of the guides on the net are for the latter, being written with setting up a local IoT net, but no connection to the 'outside world' for example.
 
-The guide I found that works is here: https://github.com/SurferTim/documentation/blob/master/configuration/wireless/access-point.md#using-the-raspberry-pi-as-an-access-point-to-share-an-internet-connection
+The guide I found that works is here: https://github.com/SurferTim/documentation/blob/master/configuration/wireless/access-point.md#using-the-raspberry-pi-as-an-access-point-to-share-an-internet-connection (now adopted as the official Raspberry Pi documentation: https://www.raspberrypi.org/documentation/configuration/wireless/access-point.md#internet-sharing)
 
 Even this guide is a little confusing if you want to set up access to your internet as it starts off describing how to set up for a standalone network.
 
