@@ -1,13 +1,13 @@
 # Set up your Raspberry Pi as an access point.
-There are a number of guides on how to do this out there, but many won't work as the way DCHP is handled in Raspbian has changed with the release of Stretch.
+There are a number of guides on how to set up the Pi as an Access Point (AP) out there, but many won't work as the way DCHP is handled in Raspbian has been changed slighty with the release of Stretch.
 
-As a result my first few attempts to do this were only a partial success. I could set up the acces point, but in doing so, killed my internet connection. DHCP was throwing up errors. 
+As a result my first few attempts to do this were only a partial success. I could set up the access point, but in doing so, killed my internet connection. DHCP was throwing up errors. 
 
 One thing to be clear on is whether you want to set up an access point that lets you connect to your internet connection via the access point, or if you just want an access point to a standalone local net. Many of the guides on the net are for the latter, being written with setting up a local IoT net, but no connection to the 'outside world' for example.
 
 The guide I found that works is here: https://github.com/SurferTim/documentation/blob/master/configuration/wireless/access-point.md#using-the-raspberry-pi-as-an-access-point-to-share-an-internet-connection (now adopted as the official Raspberry Pi documentation: https://www.raspberrypi.org/documentation/configuration/wireless/access-point.md#internet-sharing)
 
-Even this guide is a little confusing if you want to set up access to your internet as it starts off describing how to set up for a standalone network.
+Even the above guide is a little confusing if you want to set up access to your internet as it starts off describing how to set up for a standalone network.
 
 To make it really simple, I have copied just the bits required to set up and bridge your WIFI access point to your internet connection. There are actually fewer steps to configure for internet access as your internet router/modem does the DHCP for you, while if you set up a standalone net you have to set up and configure a DCHP server.
 
