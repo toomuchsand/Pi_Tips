@@ -24,4 +24,13 @@ These need to be copied across to the /etc/openvpn folder. Use:
 ```
 sudo cp ~/Downloads/mullvad_ca.crt /etc/openvpn/mullvad_ca.crt 
 ```
-for each file
+for each file (be careful typing the file names!)
+
+Then run openvpn as a serice:
+```sudo service openvpn start```
+
+You can use ```top``` to check that openvpn is running.
+
+Also use https://am.i.mullvad.net to check you are connected, or a service like https://www.iplocation.net to check that your ip has changed from your ISPs IP to the VPN provider IP.
+
+Also have a look at ```ifconfig```, you should see a ```tun0``` entry as well as your ```eth0``` or ```wlan0``` interfaces.
