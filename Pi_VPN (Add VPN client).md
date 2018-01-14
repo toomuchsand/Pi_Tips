@@ -15,9 +15,10 @@ sudo apt-get update && apt-get upgrade
 sudo apt-get install openvpn
 ```
 
+## Then get your config file(s)
 Get your config files from your VPN provider:
 
-In the case of mullvad, you log into your account on mullvad.net and download a zip file (mullvad_config_xx.zip).
+These may be different depending on provider. A lot of providers give you an ```.ovpn``` config file, but in the case of mullvad, you log into your account on mullvad.net and download a zip file (mullvad_config_xx.zip).
 Unzip the file ```unzip mullvad_config_xx.zip```
 which contains four files (mullvad_ca.crt, mullvad_crl.pem, mullvad_xx.conf and mullvad_userpass.txt). 
 These need to be copied across to the /etc/openvpn folder. Use:
@@ -25,6 +26,8 @@ These need to be copied across to the /etc/openvpn folder. Use:
 sudo cp ~/Downloads/mullvad_ca.crt /etc/openvpn/mullvad_ca.crt 
 ```
 for each file (be careful typing the file names!)
+
+## Run OpenVPN
 
 Then run openvpn as a serice:
 ```sudo service openvpn start```
