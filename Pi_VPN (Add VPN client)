@@ -8,7 +8,19 @@ This is different from setting up your own VPN server, which allows you to conne
 
 ## First get the software
 
-Download and install OpenVPN
+Download and install OpenVPN:
 
-ssudo apt-get update && apt-get upgrade
-Isudo apt-get install openvpn
+```
+sudo apt-get update && apt-get upgrade
+sudo apt-get install openvpn
+```
+
+Get your config files from your VPN provider:
+
+In the case of mullvad, you log into your account on mullvad.net and download a zip file
+which contains four files (mullvad_ca.crt, mullvad_crl.pem, mullvad_xx.conf and mullvad_userpass.txt). 
+These need to be copied across to the /etc/openvpn folder. Use:
+```
+sudo cp ~/Downloads/mullvad_ca.crt /etc/openvpn/mullvad_ca.crt 
+```
+for each file
