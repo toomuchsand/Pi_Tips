@@ -3,7 +3,7 @@
 Note this uses OpenVPN and a (paid) VPN service (in this case Mullvad - recommended by 'That one guy' https://thatoneprivacysite.net/2017/10/03/mullvad-review/).
 
 OpenVPN is used as a client to access the internet via an encrypted tunnel to the Mullvad server in your country or wherever you choose. These instructions are based on the ones on the Mullvad Site: https://www.mullvad.net/en/guides/linux-openvpn-installation/
-Most half-devcent VPN providers will give instructions to set up OpenVPN.
+Most half-decent VPN providers will give instructions to set up OpenVPN.
 
 Note: This is different from setting up your own VPN server, which would allow you to connect into your pi from other devices the internet using the same tunneling process. Your internet traffic is secure between you and your Pi, but 'visible' from you to your ISP.
 
