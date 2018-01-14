@@ -2,8 +2,7 @@
 
 [A Raspberry Pi based WiFi Access point](https://github.com/toomuchsand/Pi_Tips/blob/master/Pi_WA%20(Wireless%20Access%20Point).md)
 
-[Increase privacy (OpenVPN as client)]
-(https://github.com/toomuchsand/Pi_Tips/blob/master/Pi_VPN%20(Add%20VPN%20client).md)
+[Increase privacy with OpenVPN as client](https://github.com/toomuchsand/Pi_Tips/blob/master/Pi_VPN%20(Add%20VPN%20client).md)
 
 
 
