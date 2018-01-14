@@ -1,9 +1,9 @@
 # Set up your Raspberry Pi as an access point.
-There are a number of guides on how to set up the Pi as an Access Point (AP) out there, but many won't work as the way DCHP is handled in Raspbian has been changed slighty with the release of Stretch.
+There are a number of guides on how to set up the Pi as an Access Point (AP) out there, but many won't work now as the way DCHP is handled in Raspbian has apparently been changed slighty with the release of Stretch.
 
 As a result my first few attempts to do this were only a partial success. I could set up the access point, but in doing so, killed my internet connection. DHCP was throwing up errors. 
 
-One thing to be clear on is whether you want to set up an access point that lets you connect to your internet connection via the access point, or if you just want an access point to a standalone local net. Many of the guides on the net are for the latter, being written with setting up a local IoT net, but no connection to the 'outside world' for example.
+One thing to be clear on is whether you want to set up an access point that lets you connect to your internet connection via the access point, or if you just want an access point to the Pi or to a standalone local net. Many of the guides on the net are for the latter, being written with setting up a local IoT net, but no connection to the 'outside world' for example.
 
 The guide I found that works is here: https://github.com/SurferTim/documentation/blob/master/configuration/wireless/access-point.md#using-the-raspberry-pi-as-an-access-point-to-share-an-internet-connection (now adopted as the official Raspberry Pi documentation: https://www.raspberrypi.org/documentation/configuration/wireless/access-point.md#internet-sharing)
 
@@ -11,7 +11,9 @@ Even the above guide is a little confusing if you want to set up access to your 
 
 To make it really simple, I have copied just the bits required to set up and bridge your WIFI access point to your internet connection. There are actually fewer steps to configure for internet access as your internet router/modem does the DHCP for you, while if you set up a standalone net you have to set up and configure a DCHP server.
 
-I started from the position of having a working ethernet connection and a working WIFI connection to my home network, with internet access possible via both.
+I started from the position of having a working ethernet connection and a working WIFI connection from the pi to my home network, with internet access possible via either. This gave me confidence that the basic hardware was working OK. Use ```ifconfig``` to check you have a working ```eth0``` and working ```wlan0```.
+
+
 
 
 ## Get the software
@@ -49,7 +51,7 @@ A new bridge, which in this case is called br0.
 ```sudo brctl addbr br0```
 Connect the network ports. In this case, connect eth0 to wlan0.
 
-```sudo brctl addif br0 eth0 wlan0```
+```sudo brctl addif br0 eth0```
 
 ## Edit the interfaces file
 Now the interfaces file needs to be edited to adjust the various devices to work with bridging. 
@@ -118,3 +120,20 @@ DAEMON_CONF="/etc/hostapd/hostapd.conf"
 There should now be a functioning bridge between the wireless LAN and the Ethernet connection on the Raspberry Pi, and any device associated with the Raspberry Pi access point will act as if it is connected to the access point's wired Ethernet.
 
 The ifconfig command will show the bridge, which will have been allocated an IP address via the wired Ethernet's DHCP server. The wlan0 and eth0 no longer have IP addresses, as they are now controlled by the bridge. It is possible to use a static IP address for the bridge if required, but generally, if the Raspberry Pi access point is connected to a ADSL router, the DHCP address will be fine.
+
+## Set a fixed IP address
+General consensus seems to be you don't need a fixed IP as you can set up hostnames which will persist even if your router assigns a new IP, after a power-cut for example. I had a quick dabble with this, but couldn't get it working in the time I had available, so asked a question on the thread about this in the RaspberryPi forums: https://www.raspberrypi.org/forums/viewtopic.php?f=36&t=191453&p=1258153#p1258153 and the very knowledgable SurferTim came back with exactly how to configure fixed IP once you have set everthing else up, as follows:
+
+Edit your dhcpcd.conf file to add the fixed IP details as follows:
+```
+interface br0
+static ip_address=192.168.1.253/24
+static routers=192.168.1.1
+static domain_name_servers=8.8.8.8
+```
+Alter these to match your network set up. E.g. on my network the addresses go 192.168.0.XXX.
+
+Reboot again to check these latest changes have 'taken'.
+```ifconfig``` should show your new, fixed, IP.
+
+
