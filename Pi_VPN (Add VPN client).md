@@ -17,7 +17,8 @@ sudo apt-get install openvpn
 
 Get your config files from your VPN provider:
 
-In the case of mullvad, you log into your account on mullvad.net and download a zip file
+In the case of mullvad, you log into your account on mullvad.net and download a zip file (mullvad_config_xx.zip).
+Unzip the file ```unzip mullvad_config_xx.zip```
 which contains four files (mullvad_ca.crt, mullvad_crl.pem, mullvad_xx.conf and mullvad_userpass.txt). 
 These need to be copied across to the /etc/openvpn folder. Use:
 ```
