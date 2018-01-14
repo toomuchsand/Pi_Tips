@@ -1,4 +1,4 @@
-#How to set up your Pi as an 'aways on' torrent machine.
+# How to set up your Pi as an 'aways on' torrent machine.
 
 This guide based on a combination of https://www.makeuseof.com/tag/how-to-turn-your-raspberry-pi-into-an-always-on-downloading-megalith/
 and
@@ -9,9 +9,10 @@ Torrents have an bad reputation as a means of sharing copyright info, but they d
 https://downloads.raspberrypi.org/raspbian_latest.torrent
 
 ## Set up sequence
-
--Install Raspbian (if not already installed)
--Set your Pi to run from the USB drive
--Install VPN client (optional)
--Install a BitTorrent client
--Install a file sharing system (optional)
+This guide will tak you through the following steps:
+- Install Raspbian (if not already installed)
+- Set your Pi to run from the USB drive
+- Set up a folder on the USB to store your torrents
+- Install VPN client (optional)
+- Install a BitTorrent client
+- Install a file sharing system (optional)
