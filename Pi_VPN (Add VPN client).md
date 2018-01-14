@@ -1,4 +1,4 @@
-#How to add VPN software to the Pi to increase your privacy.
+# How to add VPN software to the Pi to increase your privacy.
 
 Note this uses OpenVPN and a (paid) VPN service (in this case Mullvad - recommended by 'That one guy' https://thatoneprivacysite.net/2017/10/03/mullvad-review/.
 OpenVPN is used as a client to access the internet via a tunnel to the Mullvad server in your country or wherever you choose. These instructions are based on the ones on the Mullvad Site: https://www.mullvad.net/en/guides/linux-openvpn-installation/
@@ -6,7 +6,7 @@ Most VPN providers will give instructions to set up opne VPN.
 
 This is different from setting up your own VPN server, which allows you to connect into your pi from the internet using the same tunneling process.
 
-##First get the software
+## First get the software
 
 Download and install OpenVPN:
 
