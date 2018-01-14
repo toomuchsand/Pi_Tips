@@ -1,4 +1,4 @@
-## A few tips on setting things up on a Raspberry Pi
+## Setting things up on a Raspberry Pi - so I don't forget
 
 [A Raspberry Pi based WiFi Access point](https://github.com/toomuchsand/Pi_Tips/blob/master/Pi_WA%20(Wireless%20Access%20Point).md)
 
