@@ -10,3 +10,5 @@ This is different from setting up your own VPN server, which allows you to conne
 
 Download and install OpenVPN
 
+ssudo apt-get update && apt-get upgrade
+Isudo apt-get install openvpn
