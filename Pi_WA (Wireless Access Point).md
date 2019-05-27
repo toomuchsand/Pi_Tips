@@ -112,7 +112,13 @@ Find the line with #DAEMON_CONF, and replace it with this:
 DAEMON_CONF="/etc/hostapd/hostapd.conf"
 ```
 
+Now unmask, enable and start hostapd:
 
+```
+sudo systemctl unmask hostapd
+sudo systemctl enable hostapd
+sudo systemctl start hostapd
+```
 
 ...
 ## Now reboot the Raspberry Pi.
